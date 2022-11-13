@@ -23,8 +23,8 @@ const client = mqtt.connect(connectUrl, {
 const topic = '/safta/mqtt'
 client.on('connect', () => {
   console.log('Connected')
-  client.subscribe(["/safta/mqtt2"], () => {
-    console.log(`Subscribe to topic /safta/mqtt2`)
+  client.subscribe(["/safta/mqtt4"], () => {
+    console.log(`Subscribe to topic /safta/mqtt4`)
   })
   client.publish(topic, 'safta mqtt test', { qos: 0, retain: false }, (error) => {
     if (error) {
